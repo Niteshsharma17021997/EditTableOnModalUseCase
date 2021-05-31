@@ -1,0 +1,17 @@
+<h1>Angular 11 Datatables Example</h1>
+<table datatable [dtOptions]="dtOptions" class="row-border hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members" (click)="onRowClick(member)">
+      <td>{{ member.name }}</td>
+      <td>{{ member.location }}</td>
+      <td>{{ member.age }}</td>
+    </tr>
+  </tbody>
+</table>
